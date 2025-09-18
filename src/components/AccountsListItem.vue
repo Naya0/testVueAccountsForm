@@ -101,13 +101,17 @@ function deleteAccount() {
 <style scoped>
 .account-list__item {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   gap: 5px;
 }
 .invalid {
   border-color: red !important;
 }
-input,
+input {
+  width: 250px;
+}
+
 .field-dropdown {
   width: 200px;
 }

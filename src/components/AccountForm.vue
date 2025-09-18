@@ -15,7 +15,7 @@
         v-model="type"
         :options="accountTypes"
         placeholder="Тип"
-        :class="{ invalid: isInvalid('type', type) }"
+        :class="['field-dropdown', { invalid: isInvalid('type', type) }]"
       />
 
       <InputText
@@ -114,13 +114,17 @@ function submitForm() {
   border-color: red !important;
 }
 
-input,
+input {
+  width: 250px;
+}
+
 .field-dropdown {
   width: 200px;
 }
 
 input[name='login'] {
   flex-grow: 1;
+  flex-shrink: 1;
 }
 
 h2 {
